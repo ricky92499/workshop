@@ -261,8 +261,13 @@
                         </div>
                         <div>
                             <p class="font-bold text-rose-700">주의사항</p>
-                            <p class="mt-1 font-semibold">• 무료 주차: <span class="font-extrabold">PAME 1</span> 주차 시에만 적용</p>
-                            <p class="mt-1 font-semibold">• 동선 최적: <a href="https://kko.to/NfSnpjpmu7" class="font-extrabold underline decoration-rose-300 underline-offset-2" target="_blank" rel="noreferrer">PAME 1 주차장(카카오맵 바로가기)</a></p>
+                            <p class="mt-1 font-semibold">• 무료 주차: 판교 파미어스몰 주차 시에만 적용</p>
+                            <p class="mt-2">
+                                <a href="https://kko.to/NfSnpjpmu7" class="inline-flex items-center gap-2 rounded-full bg-rose-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm shadow-rose-600/30" target="_blank" rel="noreferrer">
+                                    카카오맵 바로가기
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17l10-10"/><path d="M7 7h10v10"/></svg>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -395,9 +400,7 @@
     <script>
         (function () {
             const address = "기업지원 허브 6층 대회의실";
-            const appStoreUrl = "https://apps.apple.com/kr/app/%EB%84%A4%EB%AA%A8%EB%8B%89-%EC%8A%A4%ED%84%B0%EB%94%94-%EC%98%A4%EB%8B%B5%EB%85%B8%ED%8A%B8-%EC%8A%A4%EC%BA%90%EB%84%88/id6746194229";
-            const playStoreUrl = "https://play.google.com/store/apps/details?id=com.mangoslab.nemonic_study&hl=ko";
-            const fallbackStoreUrl = "https://mangoslab.com";
+            const appLinkUrl = "https://onelink.to/8jr7nb";
 
             function copyAddress() {
                 if (navigator.clipboard && window.isSecureContext) {
@@ -449,11 +452,7 @@
             const appLink = document.getElementById("nemonic-study-link");
             if (appLink) {
                 appLink.addEventListener("click", () => {
-                    const userAgent = navigator.userAgent || "";
-                    const isAndroid = /Android/i.test(userAgent);
-                    const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
-                    const url = isAndroid ? playStoreUrl : isIOS ? appStoreUrl : fallbackStoreUrl;
-                    window.open(url, "_blank", "noopener,noreferrer");
+                    window.open(appLinkUrl, "_blank", "noopener,noreferrer");
                 });
             }
         })();
